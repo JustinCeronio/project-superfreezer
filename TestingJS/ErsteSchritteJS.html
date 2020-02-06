@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Erste Schritte</title>
+</head>
+<body>
+
+
+<bu<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+
+	<script type="text/javascript">
+		
+		var name = prompt('Bitte gebe deinen Namen ein!', name);
+		var alter = prompt('Bitte gebe deinen Alter ein!', alter);
+		var ablehnungsText = 'Du bist zu jung :O';
+		const erwachsen = 18;
+		if (isNaN(alter)) {
+			alert(ablehnungsText);
+		} else if (alter >= erwachsen) {
+			var ausgabe = 'Hallo, ' + name;
+			alert(ausgabe);
+		} else {
+			alert(ablehnungsText);
+		}
+		
+		function WurzelZiehen(zahl) {
+			zahl = parseFloat(zahl);
+			var ergebnis = Math.sqrt(zahl);
+			return ergebnis;
+		}
+		WurzelZiehen(eingabe);
+		var eingabe = prompt('Gib ne Zahl ein lul.', eingabe);
+		var ausgabe = 'Die Wurzel von ' + eingabe + 'ist' + ergebnis + '.';
+		alert(ausgabe);
+
+
+
+	</script>
+</body>
+</html>
