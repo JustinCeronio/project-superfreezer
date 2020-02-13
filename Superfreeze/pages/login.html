@@ -8,6 +8,8 @@
 			Autoren: ..., ... 
 			Datum:   ...
 		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/login.css">
 		<script type="text/javascript" src="../scripts/login.js"></script>
@@ -18,6 +20,11 @@
 		</style>
 	</head>
 	<body>
-
+		<form class="box" action="overview.html" method="post">
+	    	<h1>Login</h1>
+	    	<input type="text" name="username" placeholder="Username">
+	    	<input type="password" name="password" placeholder="password">
+	    	<input type="submit" name="login" value="Login" onClick="pasuser(this.form)">>
+	    </form>
 	</body>
 </html>

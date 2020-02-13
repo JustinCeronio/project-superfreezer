@@ -1,7 +1,46 @@
 /*
 Name:    Freezerdetail-Seitendesign
-Autoren: ..., ...
-Datum:   ...
+Autoren: Justin Ceronio, Lukas Freckmann
+Datum:   12.02.2020 - 13.02.2020
 
 CSS-Info: Der Font wird in der HTML-Datei gesetzt, muss also nicht hier gesetzt werden.
 */
+
+.cheader { grid-area: header; }
+.cmain { grid-area: main; }
+.cmain2 { grid-area: main2}
+.cright { grid-area: right; }
+.cfooter { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template:
+    'header header header'
+    'main right right'
+    'main2 right right'
+    'footer footer footer';
+  grid-gap: 10px;
+  background-color: green;;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 20px;
+}
+
+.cright > table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.EditProd > table tr td {
+  border-style: none;
+}
+
+h2, h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

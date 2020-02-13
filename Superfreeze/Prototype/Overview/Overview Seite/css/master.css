@@ -3,9 +3,9 @@ body {
 }
 
 .cheader { grid-area: header; }
-.cmain { grid-area: main; }
-.cmain2 { grid-area: main2; }
-.cmain3 { grid-area: main3; }
+.cfreezer1 { grid-area: main; }
+.cfreezer2 { grid-area: main2; }
+.cfreezer3 { grid-area: main3; }
 .cright { grid-area: right; }
 .cfooter { grid-area: footer; }
 
