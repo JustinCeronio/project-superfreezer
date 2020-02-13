@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <!--
+    Name: freezerdetails.html
+    Autor: Justin Ceronio
+    Datum: 12.02.2020
+    -->
+
+    <meta charset="utf-8">
+    <title>Freezer Details</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> <!--Roboto Font importieren-->
+    <link rel="stylesheet" href="css/master.css"> <!-- CSS Verlinkung-->
+  </head>
+  <body>
+    <div class="grid-container">
+    <div class="item1">
+      <h1>Projekt Superfreeze</h1>
+    </div>
+    <div class="item3">
+      <h1>Freezer 2</h1>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+      <script type="text/javascript">
+        var ButtonTableWidth = 2;
+        function MakeButton(ident) { 
+          var ButtonArray = [];
+          ButtonArray[ident] = ident;
+          document.write('<td><button id="Btn' + ident + '"');
+          document.write(' onClick=showInfo(' + ident + ') style="width: 120px; height: 120px; font-size: 25px;">');
+          document.writeln('Zone ' + ident + '</button></td>');
+        }
+        function MakeButtonTable(NoOfButtons) {
+          document.writeln('<table border="1"><tr>');
+          for (var ButtonCount = 1; ButtonCount <= NoOfButtons; ButtonCount++) {
+            var temperature = Math.floor(Math.random() * 6) + 1;
+            MakeButton(ButtonCount);
+            if ((ButtonCount % ButtonTableWidth) == 0) {
+              document.writeln('</tr><tr>');
+            }
+          }
+          document.writeln('</tr></table>');  
+        }
+  			while(true) {
+  				var ZonenAnzahl = prompt("Wieviele Zonen hat euer Freezer?");
+            if (ZonenAnzahl <= 8 && ZonenAnzahl > 0) {
+              if (ZonenAnzahl == 1) {
+                ButtonTableWidth = 3;
+              } else if (ZonenAnzahl == 2) {
+                ButtonTableWidth = 3;
+              } else if (ZonenAnzahl == 3) {
+                ButtonTableWidth = 3;
+              } else if (ZonenAnzahl == 4) {
+                ButtonTableWidth = 2;
+              } else if (ZonenAnzahl == 5) {
+                ButtonTableWidth = 3;
+              } else if (ZonenAnzahl == 6) {
+                ButtonTableWidth = 2;
+              } else if (ZonenAnzahl == 7) {
+                ButtonTableWidth = 2;
+              } else if (ZonenAnzahl == 8) {
+                ButtonTableWidth = 3;
+              } else {
+                ButtonTableWidth = 3;
+              }
+              MakeButtonTable(ZonenAnzahl);
+              break;
+            } else if (ZonenAnzahl > 8) {
+              alert("Euer Freezer kann nicht mehr als 8 Zonen haben.");
+            } else if (ZonenAnzahl < 1) {
+              alert("Euer Freezer kann nicht weniger als eine Zone haben.");
+            } else {
+              alert("Eure Angabe ist ungültig. Bitte versuchen Sie es erneut.");
+            }
+  			}
+  			function showInfo(ident) {
+          document.getElementById("ZoneText").style.display = "block";
+  				document.getElementById("TZoneID").textContent = 'Zone ' + ident;
+  			}
+    		</script>
+      </div>
+      <div class="item4">
+        <h2>Products</h2>
+        <table style="width:100%">
+          <tr>
+            <th>Milch</th>
+              <td><img src="img/cross.png" alt="cross"></td>
+          </tr>
+          <tr>
+            <th>Gift</th>
+            <td><img src="img/cross.png" alt="cross"></td>
+          </tr>
+        </table>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="EditProd">
+          <table style="width:100%">
+            <tr>
+              <td style="width:50%"><button id="ButtonRemove">Remove</button></td>
+              <td style="width:50%"><button id="ButtonAdd">Add</button></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="item5">
+        Copyright 2020 WISS Elite Team - MIT License
+      </div>
+      <div class="item6">
+        <h2 id="TZoneID"></h2>
+        <p id="ZoneText" style="display: none;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.At vero eos et accusam et justo duo dolores et ea rebum.Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</p>
+      </div>
+    </div>
+  </body>
+</html>
